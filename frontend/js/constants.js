@@ -3,7 +3,9 @@ const chain = 'rinkeby'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the Crypto Arabs NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'The Crypto Arabs NFT Project is a decentralized, open-source project that aims to demonstrate how to develope and launch your own NFT Collection. Follow step by step on the <a href="https://youtube.com/codestackr"  target="_blank" rel="noopener noreferrer">codeSTACKr</a> YouTube channel.';
+const welcome_p = 'For the first time in history, an Arabic Cartoon show “Shaabiat Al Cartoon” has been turned into an NFT collection consisting of 9,999 unique art pieces that have been derived from the 10 main characters within the show.\
+Crypto Arabs NFTs are not only a collectable asset, they also give you access to our founders and their network of industry leaders. Their vision is to educate the world about Web 3.0, plus each NFT purchase is a donation to charity.\
+Be part of the movement.';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
