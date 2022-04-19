@@ -7,24 +7,75 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "Crypto Arabs";
+const description = `For the first time in history, an Arabic Cartoon show “Shaabiat Al Cartoon” has been turned into an NFT collection consisting of 9,999 unique art pieces that have been derived from the 10 main characters within the show.\
+Crypto Arabs NFTs are not only a collectable asset, they also give you access to our founders and their network of industry leaders. Their vision is to educate the world about Web 3.0, plus each NFT purchase is a donation to charity.\
+Be part of the movement.`;
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
+  // {
+  //   growEditionSizeTo: 1000,
+  //     layersOrder: [
+  //       { name: "Background" },
+  //       { name: "Eyeball" },
+  //       { name: "Eye color" },
+  //       { name: "Iris" },
+  //       { name: "Shine" },
+  //       { name: "Bottom lid" },
+  //       { name: "Top lid" },
+  //     ],
+  // }
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 3,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Affari_Base" },
+      { name: "Affari_Clothes" },
+      { name: "Affari_Head" },
+      { name: "Affari_Eyewear" },
+      { name: "Affari_Neckwear" },
+      { name: "Affari_back_accessories" },
+      { name: "Affari_Hand_accessories" },
+      { name: "Affari_Shoes_and_sneakers" }
     ],
   },
+  // {
+  //   growEditionSizeTo: 4000,
+  //   layersOrder: [
+  //     { name: "Atooga_Base" },
+  //     { name: "Atooga_T-shirts" },
+  //     { name: "Atooga_Head" },
+  //     { name: "Atooga_Eyewear" },
+  //     { name: "Atooga_Neckwear" },
+  //     { name: "Atooga_back_accessories" },
+  //     { name: "Atooga_Hand_accessories" }
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 6000,
+  //   layersOrder: [
+  //     { name: "Sabtu_Base" },
+  //     { name: "Sabtu_T-shirt" },
+  //     { name: "Sabtu_Head" },
+  //     { name: "Sabtu_Eyewear" },
+  //     { name: "Sabtu_Neckwear" },
+  //     { name: "Sabtu_Back_accessories" },
+  //     { name: "Sabtu_Shoes_and_sneakers" }
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 10000,
+  //   layersOrder: [
+  //     { name: "Shambeh_Base" },
+  //     { name: "Shambeh_T-shirt" },
+  //     { name: "Shambeh_Head" },
+  //     { name: "Shambeh_baker_Eyewear" },
+  //     { name: "Shambeh_Neckwear" },
+  //     { name: "Shambeh_back_accessories" },
+  //     { name: "Shambeh_Shoes_and_sneakers" }
+  //   ],
+  // },
 ];
 
 const shuffleLayerConfigurations = true;
@@ -38,7 +89,7 @@ const format = {
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://cryptoarabs.art", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -49,22 +100,22 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'CRYPTOARABS';
+const CONTRACT_SYMBOL = 'CA';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const OWNER_ADDRESS = '0x5e7a9c8B2E11684Ca2852218FDA21C1132c6f9A5';
+const TREASURY_ADDRESS = '0x5e7a9c8B2E11684Ca2852218FDA21C1132c6f9A5';
 const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const MINT_PRICE = 0.03; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-04-19T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-04-19T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x5e7a9c8B2E11684Ca2852218FDA21C1132c6f9A5"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
@@ -74,9 +125,11 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
-const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_TITLE = "CRYPTOARABS"; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
+const GENERIC_DESCRIPTION = `For the first time in history, an Arabic Cartoon show “Shaabiat Al Cartoon” has been turned into an NFT collection consisting of 9,999 unique art pieces that have been derived from the 10 main characters within the show.\
+Crypto Arabs NFTs are not only a collectable asset, they also give you access to our founders and their network of industry leaders. Their vision is to educate the world about Web 3.0, plus each NFT purchase is a donation to charity.\
+Be part of the movement.`; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmQhXf3db4ByXCYFSScCj8ESVerU8mDN6suGaAubzhifw3"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {

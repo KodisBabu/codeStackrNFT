@@ -177,7 +177,9 @@ const addAttributes = (_element) => {
 };
 
 const loadLayerImg = async (_layer) => {
+  console.log(_layer);
   return new Promise(async (resolve) => {
+   // console.log("Selected element", _layer.selectedElement);
     const image = await loadImage(`${_layer.selectedElement.path}`);
     resolve({ layer: _layer, loadedImage: image });
   });
@@ -354,6 +356,7 @@ const startCreating = async () => {
     ) {
       let newDna = createDna(layers);
       if (isDnaUnique(dnaList, newDna)) {
+        console.log(newDna,layers)
         let results = constructLayerToDna(newDna, layers);
         let loadedElements = [];
 
